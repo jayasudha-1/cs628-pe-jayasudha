@@ -8,7 +8,7 @@ The web app consists of three main components: Resume.css, Resume.js, and App.js
 The Resume.css file contains styles that define the appearance and styles of the app, such as the background color, text alignment to center, and font size.
 The Resume.js file imports the Resume.css file and defines the Resume component. 
 The App.js file imports both the Resume.css and Resume.js files. It defines the App component, which provides it as the main component for the web app.
-Inside the App component, the Resume component is rendered within a <div> element with the className "App". When the web app is executed, the App component is rendered, which in turn renders the Resume component.
+Inside the App component, the Resume component is rendered within a div element with the className App. When the web app is executed, the App component is rendered, which in turn renders the Resume component.
 
 
 Output:
