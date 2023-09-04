@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+Input:
+Recipe Data: The main data input for your application is a collection of recipes. This data is initially empty in the App component and is populated as new recipes are added.
+Processing:
+AddRecipe Component:
+Input: User input for a new recipe (name, ingredients, description).
+Processing:
+It uses the useState hook to manage form input and state.
+When the user submits the form, it creates a new recipe object with the provided data, assigns it a unique ID, and adds it to the recipes state.
+It uses the useNavigate hook from react-router-dom to navigate to the recipe list page after adding a new recipe.
+RecipeList Component:
+Input: The list of recipes passed as a prop.
+Processing:
+It displays a list of recipes, each with a link to its details page.
+When a recipe link is clicked, it sets the selectedRecipe state to that recipe, which is then displayed in the RecipeDetails component.
+RecipeDetails Component:
+Input: The selected recipe passed as a prop.
+Processing:
+It displays the details of the selected recipe.
+It provides options to edit or delete the recipe. When delete is clicked, it calls the onDelete function passed as a prop to remove the recipe from the recipes state.
+EditRecipe Component:
+Input: The selected recipe to edit and the list of recipes passed as props.
+Processing:
+It initializes the form with the data of the selected recipe.
+When the user submits the form, it updates the recipe data in the recipes state.
+It uses the useNavigate hook to navigate back to the recipe list after editing.
+Output:
+The application outputs a user interface with the following features:
+A recipe list page that displays a list of recipes and allows users to click on a recipe to view its details.
+A recipe details page that displays the name, ingredients, and description of a selected recipe, with options to edit or delete the recipe.
+An add recipe page that allows users to input new recipes.
+An edit recipe page that allows users to edit existing recipes.
+Users can navigate between these pages using links provided by the react-router-dom library.
+The application dynamically updates the recipe list and details based on user interactions and manages the state of recipes using React's useState hook.
+When a user deletes a recipe, it updates the list of recipes by removing the deleted recipe from the state.
+The application is wrapped in a Router component to enable client-side routing.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
