@@ -23,6 +23,8 @@ Processing:
 It initializes the form with the data of the selected recipe.
 When the user submits the form, it updates the recipe data in the recipes state.
 It uses the useNavigate hook to navigate back to the recipe list after editing.
+
+
 Output:
 The application outputs a user interface with the following features:
 A recipe list page that displays a list of recipes and allows users to click on a recipe to view its details.
