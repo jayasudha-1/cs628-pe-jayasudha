@@ -1,6 +1,8 @@
 Input:
 Recipe Data: The main data input for your application is a collection of recipes. This data is initially empty in the App component and is populated as new recipes are added.
-Processing:
+
+
+Process:
 AddRecipe Component:
 Input: User input for a new recipe (name, ingredients, description).
 Processing:
